@@ -17,8 +17,13 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    outputs:
-      game_name: ${{ steps.pre_process_validation.outputs.game_name }}
+      outputs:
+        game_name: ${{ steps.pre_process_validation.outputs.game_name }}
+        validation_result: ${{ steps.request_validation.outputs.result }}
+        validation_message: ${{ steps.request_validation.outputs.message }}
+        slug: ${{ steps.request_validation.outputs.slug }}
+        json_path: ${{ steps.request_validation.outputs.json_path }}
+        md_path: ${{ steps.request_validation.outputs.md_path }}
 
     steps:
       - name: Checkout Repository
@@ -49,7 +54,7 @@ jobs:
         uses: drewpypro/drewpy-actions/request_validation@v1
         id: request_validation
         with:
-          game_name: ${{ steps.pre_process_validation.outputs.game_name }}
+          game_name: ${{ needs.validate.outputs.game_name }}
 
       - name: Generate Approval PR
         id: pre_approval
@@ -143,7 +148,8 @@ jobs:
 
           # Commit only if there are changes
           if ! git diff --staged --quiet; then
-            git add "${{ steps.request_validation.outputs.assessment_md }}"
+            git add "${{ steps.request_validation.outputs.md_path }}"
+            git add "${{ steps.request_validation.outputs.json_path }}"
             git commit -m "Add ${GAME_NAME} assessment files generated from ai assessment step from issue #${ISSUE_ID}"
             
             # Force push or push with lease to handle potential conflicts
@@ -160,20 +166,20 @@ jobs:
             gh label create "under-human-review" --color FBCA04 --description "awaiting human review" || true
             gh issue edit "$ISSUE_ID" --add-label "under-human-review"
   
-  sync_docs_on_merge:
-    if: github.event_name == 'pull_request' &&
-        github.event.action == 'closed' &&
-        github.event.pull_request.merged == true
-    permissions:
-      contents: write
-      steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }} 
+  # sync_docs_on_merge:
+  #   if: github.event_name == 'pull_request' &&
+  #       github.event.action == 'closed' &&
+  #       github.event.pull_request.merged == true
+  #   permissions:
+  #     contents: write
+  #     steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         ref: ${{ github.head_ref }} 
 
-      - name: Generate Docs Update
-        env:
-          DOCS_REPO_TOKEN: ${{ secrets.DOCS_REPO_TOKEN }}
-        run: |
-          echo "Prepare files for drewpypro.github.io github-pages"
-          npm, yarn???
+  #     - name: Generate Docs Update
+  #       env:
+  #         DOCS_REPO_TOKEN: ${{ secrets.DOCS_REPO_TOKEN }}
+  #       run: |
+  #         echo "Prepare files for drewpypro.github.io github-pages"
+  #         npm, yarn???
