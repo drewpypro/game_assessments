@@ -103,6 +103,7 @@ jobs:
             gh issue comment $ISSUE_ID --body-file /tmp/issue_comment.txt
             gh label create "pending-approval" --color FBCA04 --description "awaiting approval" || true
             gh issue edit "$ISSUE_ID" --add-label "pending-approval"
+            gh issue edit $ISSUE_NUMBER --title "[Games] Assessment for: ${GAME_NAME}"
 
   generate_assessment:
     if: github.event_name == 'pull_request_review' &&

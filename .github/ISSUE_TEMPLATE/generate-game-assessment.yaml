@@ -1,6 +1,6 @@
 name: Create AI assessment
 description: Generate an AI assessment for a given domain. 
-title: "[Games] Assessment for: {{ game_name }}"
+title: "[Games] AI Assessment Request"
 labels: ["game-assessment"]
 assignees:
   - drewpypro
