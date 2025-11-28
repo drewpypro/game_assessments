@@ -56,7 +56,7 @@ jobs:
           cat "$GITHUB_OUTPUT"
 
           echo "DEBUG: Load github output"
-          echo "game_name=$GAME_NAME" >> $GITHUB_OUTPUT
+          echo "game_name=$GAME_NAME" >> "$GITHUB_OUTPUT"
 
           echo "DEBUG: PostTest"
           cat "$GITHUB_OUTPUT"
