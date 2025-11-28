@@ -65,7 +65,7 @@ jobs:
         uses: drewpypro/drewpy-actions/request_validation@gamesv1
         id: request_validation
         with:
-          game_name: ${{ needs.validate.outputs.game_name }}
+          game_name: ${{ pre_process_validation.outputs.game_name }}
 
       - name: Generate Approval PR
         id: pre_approval
@@ -98,6 +98,8 @@ jobs:
 
             # Commit only if there are changes
             if ! git diff --staged --quiet; then
+              git add "${{ request_validation.outputs.md_path }}"
+              git add "${{ request_validation.outputs.json_path }}"
               git commit -m "Add ${GAME_NAME} from issue #${ISSUE_ID}"
               
               # Force push or push with lease to handle potential conflicts
