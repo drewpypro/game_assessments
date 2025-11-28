@@ -43,6 +43,7 @@ jobs:
         run: |
           echo "Extracting game name"
           jq -r '.issue.body' "$GITHUB_EVENT_PATH" > /tmp/game_name.txt
+          cat /tmp/game_name.txt
           echo "DEBUG: validate game_name"
           cat /tmp/game_name.txt
           echo "DEBUG: Load github output"
