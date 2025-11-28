@@ -43,13 +43,23 @@ jobs:
         run: |
           echo "Extracting game name"
           jq -r '.issue.body' "$GITHUB_EVENT_PATH" > /tmp/game_name.txt
-          cat /tmp/game_name.txt
+
           echo "DEBUG: validate game_name"
           cat /tmp/game_name.txt
+
+          
+          # Take the last non-empty line as the game name
+          GAME_NAME=$(grep -v '^[[:space:]]*$' /tmp/game_name.txt | tail -n1)
+          echo "DEBUG: extracted GAME_NAME='$GAME_NAME'"
+
+          echo "DEBUG: Pre GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+
           echo "DEBUG: Load github output"
-          echo "game_name=$(cat /tmp/game_name.txt)" >> $GITHUB_OUTPUT
-          echo "DEBUG: Test github outputs"
-          echo $GITHUB_OUTPUT
+          echo "game_name=$GAME_NAME" >> $GITHUB_OUTPUT
+
+          echo "DEBUG: PostTest"
+          cat "$GITHUB_OUTPUT"
 
       - name: Validate Request
         uses: drewpypro/drewpy-actions/request_validation@gamesv1
