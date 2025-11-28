@@ -1,0 +1,22 @@
+name: Create AI assessment
+description: Generate an AI assessment for a given domain. 
+title: "[Games] Assessment for: "
+labels: ["game-assessment"]
+assignees:
+  - drewpypro
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Game Assessment Request
+        Fill out this form to generate an AI game assessment report. 
+
+  - type: input
+    id: game_name
+    attributes:
+      label: Game Name
+      description: Game to perform assessment on
+      placeholder: "Arc Raiders"
+    validations:
+      required: true
