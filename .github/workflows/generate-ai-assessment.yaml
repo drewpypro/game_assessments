@@ -17,13 +17,13 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-      outputs:
-        game_name: ${{ steps.pre_process_validation.outputs.game_name }}
-        validation_result: ${{ steps.request_validation.outputs.result }}
-        validation_message: ${{ steps.request_validation.outputs.message }}
-        slug: ${{ steps.request_validation.outputs.slug }}
-        json_path: ${{ steps.request_validation.outputs.json_path }}
-        md_path: ${{ steps.request_validation.outputs.md_path }}
+    outputs:
+      game_name: ${{ steps.pre_process_validation.outputs.game_name }}
+      validation_result: ${{ steps.request_validation.outputs.result }}
+      validation_message: ${{ steps.request_validation.outputs.message }}
+      slug: ${{ steps.request_validation.outputs.slug }}
+      json_path: ${{ steps.request_validation.outputs.json_path }}
+      md_path: ${{ steps.request_validation.outputs.md_path }}
 
     steps:
       - name: Checkout Repository
