@@ -51,7 +51,7 @@ jobs:
           echo $GITHUB_OUTPUT
 
       - name: Validate Request
-        uses: drewpypro/drewpy-actions/request_validation@v1
+        uses: drewpypro/drewpy-actions/request_validation@gamesv1
         id: request_validation
         with:
           game_name: ${{ needs.validate.outputs.game_name }}
@@ -120,7 +120,7 @@ jobs:
 
       - name: Generate AI assessment
         id: generate_assessment
-        uses: drewpypro/drewpy-ai-actions/call_assessment_api.py@v1
+        uses: drewpypro/drewpy-ai-actions/call_assessment_api@gamesv1
         with:
           game_name: ${{ needs.validate.pre_process_validation.outputs.game_name }}
       
