@@ -1,0 +1,52 @@
+name: Sync game assessments into docs site
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'json/**'
+
+jobs:
+  sync_docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      DOCS_REPO: drewpypro/drewpypro.github.io
+    steps:
+      - name: Checkout game_assessments
+        uses: actions/checkout@v4
+
+      - name: Clone docs repo
+        env:
+          PAT: ${{ secrets.PAT_GITHUB_ACTIONS }}
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+          git clone "https://$PAT@github.com/$DOCS_REPO.git" docs-repo
+          cd docs-repo
+          git checkout gh-pages
+
+      - name: Copy assessment docs into docs repo
+        run: |
+          # Adjust paths to where you want them to appear in the site
+          # Example: docs live under game_assessments/ inside drewpypro.github.io
+          rsync -av --delete docs/ docs-repo/game_assessments/docs/
+          rsync -av --delete json/ docs-repo/game_assessments/json/
+
+      - name: Commit and push to docs repo
+        env:
+          PAT: ${{ secrets.PAT_GH_PAGES_DEPLOY }}
+        run: |
+          cd docs-repo
+
+          if git status --porcelain | grep .; then
+            git add .
+            git commit -m "Sync game assessments from game_assessments@${{ github.sha }}"
+            git push "https://$PAT@github.com/$DOCS_REPO.git" gh-pages
+          else
+            echo "No changes to sync."
+          fi
+

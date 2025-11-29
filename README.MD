@@ -49,7 +49,6 @@ game_assessments/
 - **drewpy-ai-actions/call_assessment_api.py**
     - where assessment instructions, context and persona are stored. 
     - generates game assessment json db. 
-- **drewpy-actions/report_generator.py**
     - takes input $game_name-assessment.json file and generates markdown report based on template. 
 - **drewpy-actions/doc_generator.py**
     - receives input pushed to staging branch and generates required npm and yarn commands required to build the site and deploy the docs on drewpypro.github.io through the gh-pages branch. 
