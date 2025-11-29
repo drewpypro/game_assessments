@@ -1,0 +1,48 @@
+{
+  "target": {
+    "game_name": "slut squad",
+    "timestamp_utc": "2025-11-29T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "Passion Panda, GreenT",
+      "publisher": "Passion Panda Publishing",
+      "country": "unknown",
+      "summary": "Slut Squad is an adult NSFW idle-merge game developed by Passion Panda and GreenT and published by Passion Panda Publishing, as listed on its Steam store page and related tracking sites. The entities appear to be small, adult-game-focused studios/publishers without broad mainstream presence, and there is limited public corporate information such as a clearly stated country of origin or long track record outside adult platforms. Overall, they seem typical of niche adult game developers rather than large, established AAA companies, with no obvious red flags but also relatively little verifiable background information.",
+      "sources": [
+        "https://store.steampowered.com/app/3554940/Slut_Squad/",
+        "https://steamdb.info/app/3554940/",
+        "https://steambase.io/games/slut-squad/info",
+        "https://isthereanydeal.com/product/0196d2ce-e331-720f-b551-500272ba13ea/"
+      ]
+    },
+    "anti_cheat": {
+      "type": "none",
+      "classification": "none",
+      "summary": "Available public information for Slut Squad, including its Steam store page and third-party tracking sites, does not mention any dedicated anti-cheat or third-party DRM such as Denuvo, Easy Anti-Cheat, or kernel-level drivers. The game is a single-player idle-merge title with in-app purchases and appears to rely only on standard Steam platform protections, with no indication of invasive or kernel-level components. As a result, it is reasonable to classify the game as having no notable anti-cheat or additional DRM beyond standard store/platform mechanisms.",
+      "sources": [
+        "https://store.steampowered.com/app/3554940/Slut_Squad/",
+        "https://steamdb.info/app/3554940/",
+        "https://isthereanydeal.com/product/0196d2ce-e331-720f-b551-500272ba13ea/"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "unknown",
+      "steam_percentage": "unknown",
+      "summary": "As of late November 2025, Slut Squad has not yet released on Steam and its store page shows no user reviews, so there is no current Steam review summary label or positive review percentage available. Community activity is limited to a small pre-release presence on the Steam Community hub and external tracking sites, which report zero reviews and focus mainly on wishlists and Discord membership rather than qualitative feedback. Overall sentiment cannot yet be reliably assessed due to the absence of user review data.",
+      "sources": [
+        "https://store.steampowered.com/app/3554940/Slut_Squad/",
+        "https://steamdb.info/app/3554940/",
+        "https://usevania.com/game/Slut_Squad",
+        "https://steamcommunity.com/app/3554940"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 7,
+    "anti_cheat_score": 9,
+    "community_score": 3,
+    "overall_score": 6,
+    "overall_summary": "Core identity details for Slut Squad are fairly clear: it is an adult NSFW idle-merge game developed by Passion Panda and GreenT and published by Passion Panda Publishing, though the primary country of origin is not clearly disclosed, which slightly lowers confidence in the identity dimension. There is no evidence of third-party or kernel-level anti-cheat or additional DRM beyond standard Steam mechanisms, so the anti-cheat/DRM profile appears non-invasive and low risk. However, because the game is not yet released on Steam and has no user reviews, community sentiment cannot be meaningfully evaluated, resulting in a low confidence score for that dimension. Overall, the game appears to be a typical niche adult title from small studios with minimal transparency about corporate background and no current review data, but no obvious signs of intrusive anti-cheat or DRM."
+  }
+}
