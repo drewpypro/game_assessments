@@ -36,12 +36,12 @@ jobs:
           GIT_COMMITTER_EMAIL: github-actions@github.com
           GH_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS }}
         run: |
+          git add src/pages/game_assessments
           git status
-          if git diff --quiet; then
+          if git diff --cached --quiet; then
             echo "No doc changes to commit."
             exit 0
           fi
 
-          git add src/pages/game_assessments
           git commit -m "Sync game assessment docs from game_assessments"
           git push origin main
