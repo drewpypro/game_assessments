@@ -93,9 +93,9 @@ jobs:
           touch "$JSON_PATH"
           touch "$MD_PATH"
 
-          if [ "$AUTHOR" = "drewpypro" ]; then
+          if [ "$AUTHOR" = "drewpypro123" ]; then
             echo "✅ Auto-approving" > /tmp/issue_comment.txt
-            gh label create "drewpypro" --color DAE8FC --description "🍆" || true
+            gh label create "drewpypro123" --color DAE8FC --description "🍆" || true
             gh issue edit "$ISSUE_ID" --add-label "drewpypro"      
           else
 
