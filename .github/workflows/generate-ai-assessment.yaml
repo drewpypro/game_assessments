@@ -89,12 +89,10 @@ jobs:
 
       - name: Generate AI assessment
         id: generate_assessment
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         uses: drewpypro/drewpy-actions/call_assessment_api@gamesv1
         with:
           game_name: ${{ needs.validate.outputs.game_name }}
-
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Generate Approval PR
         id: pr_approval
         env:
