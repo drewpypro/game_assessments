@@ -1,52 +1,47 @@
-name: Sync game assessments into docs site
+# game_assessments/.github/workflows/sync-docs-to-pages.yaml
+name: Sync docs to portfolio site
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - 'docs/**'
-      - 'json/**'
 
 jobs:
-  sync_docs:
+  sync-docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    env:
-      DOCS_REPO: drewpypro/drewpypro.github.io
     steps:
       - name: Checkout game_assessments
         uses: actions/checkout@v4
 
-      - name: Clone docs repo
+      - name: Checkout docs repo (drewpypro.github.io)
+        uses: actions/checkout@v4
+        with:
+          repository: drewpypro/drewpypro.github.io
+          ref: main
+          path: portfolio
+          token: ${{ secrets.PAT_GITHUB_ACTIONS }}
+
+      - name: Copy game_assessments docs into docs repo
+        run: |
+          mkdir -p portfolio/src/pages/game_assessments
+          cp -v docs/*.md portfolio/src/pages/game_assessments/
+
+      - name: Commit and push updated docs to docs repo
+        working-directory: portfolio
         env:
-          PAT: ${{ secrets.PAT_GITHUB_ACTIONS }}
+          GIT_AUTHOR_NAME: github-actions
+          GIT_AUTHOR_EMAIL: github-actions@github.com
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
+          GH_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS }}
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-
-          git clone "https://$PAT@github.com/$DOCS_REPO.git" docs-repo
-          cd docs-repo
-          git checkout gh-pages
-
-      - name: Copy assessment docs into docs repo
-        run: |
-          # Adjust paths to where you want them to appear in the site
-          # Example: docs live under game_assessments/ inside drewpypro.github.io
-          rsync -av --delete docs/ docs-repo/game_assessments/docs/
-          rsync -av --delete json/ docs-repo/game_assessments/json/
-
-      - name: Commit and push to docs repo
-        env:
-          PAT: ${{ secrets.PAT_GH_PAGES_DEPLOY }}
-        run: |
-          cd docs-repo
-
-          if git status --porcelain | grep .; then
-            git add .
-            git commit -m "Sync game assessments from game_assessments@${{ github.sha }}"
-            git push "https://$PAT@github.com/$DOCS_REPO.git" gh-pages
-          else
-            echo "No changes to sync."
+          git status
+          if git diff --quiet; then
+            echo "No doc changes to commit."
+            exit 0
           fi
 
+          git add src/pages/game_assessments
+          git commit -m "Sync game assessment docs from game_assessments"
+          git push origin main

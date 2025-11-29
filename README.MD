@@ -63,6 +63,8 @@ game_assessments/
 
 
 
+
+# Repo Structure
 ```
 game_assessments/
 └── .github/
@@ -70,25 +72,29 @@ game_assessments/
     │   ├── generate_ai_assessment.yaml    // calls apis and creates files and handles PRs
     │   └── docs_updater.yaml             // After PR is approved generates docs page in drewpypro.github.io
     └── ISSUE_TEMPLATE/
-        └── game_assessor_reques.yaml   // Issue template that triggers pipeline and PR. 
+        └── game_assessor_request.yaml   // Issue template that triggers pipeline and PR. 
 ├── output/$game_name.json             // JSON entry per game
 └── docs/$game_name.md                // Markdown formatted report pushed to drewpypro.github.io
 ```
-
+   
 ```
-drewpy-ai-actions/
+drewpy-actions/
+├── request_validation/
+    ├── request_validation.py           
+    ├── README.MD
+    ├── requirements.txt
+    └── action.yml  
 └── call_assessment_api/
+    ├── instructions/                  // calls apis and generates docs files
+    │   ├── game_anti_cheat_v1.md
+    │   ├── game_community_v1.md
+    │   ├── game_identity_v1.md
+    │   ├── game_resercher_v1.md
+    ├── schema/                       // json format scheme
+    ├── docs/                         // generated docs
+    ├── json/                         // generated json
     ├── call_assessment_api.py           // calls apis and generates docs files
     ├── README.MD
     ├── requirements.txt
     └── action.yml                       
-```
-
-```
-drewpy-actions/
-├── request_validation/
-    ├── request_validation.py           // linting occurs (standard unicode characters, no length greater than 69, transform name to standard (i.e., "ARC Raiders", turns into arc-raiders))
-    ├── README.MD
-    ├── requirements.txt
-    └── action.yml  
 ```
