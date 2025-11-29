@@ -81,7 +81,7 @@ jobs:
           AUTHOR=$(jq -r '.issue.user.login' "$GITHUB_EVENT_PATH")
           ISSUE_ID=${{ github.event.issue.number }}
           BRANCH="issue-${ISSUE_ID}"
-          
+
           echo "Preparing pre-approval files"
           JSON_PATH="${{ steps.request_validation.outputs.json_path }}"
           MD_PATH="${{ steps.request_validation.outputs.md_path }}"
@@ -108,13 +108,12 @@ jobs:
             # Create and switch to the branch
             git checkout -b "$BRANCH"
 
+            git add "$MD_PATH"
+            git add "$JSON_PATH"
+
             # Commit only if there are changes
             if ! git diff --staged --quiet; then
-              git add "${{ steps.request_validation.outputs.md_path }}"
-              git add "${{ steps.request_validation.outputs.json_path }}"
               git commit -m "Add ${GAME_NAME} from issue #${ISSUE_ID}"
-              
-              # Force push or push with lease to handle potential conflicts
               git push -f origin "$BRANCH"
 
               PR_URL=$(gh pr create \
@@ -122,13 +121,14 @@ jobs:
                 --body "This PR generates a request to review #${ISSUE_ID} for ${GAME_NAME} by ${AUTHOR}." \
                 --head "$BRANCH" \
                 --base main)
-            fi
 
-            echo "A PR has been submitted for review, please wait for approval" > /tmp/issue_comment.txt
-            gh issue comment $ISSUE_ID --body-file /tmp/issue_comment.txt
-            gh label create "pending-approval" --color FBCA04 --description "awaiting approval" || true
-            gh issue edit "$ISSUE_ID" --add-label "pending-approval"
-            gh issue edit "$ISSUE_ID" --title "[Games] Assessment for: ${GAME_NAME}"
+              echo "A PR has been submitted for review, please wait for approval" > /tmp/issue_comment.txt
+              gh issue comment $ISSUE_ID --body-file /tmp/issue_comment.txt
+              gh label create "pending-approval" --color FBCA04 --description "awaiting approval" || true
+              gh issue edit "$ISSUE_ID" --add-label "pending-approval"
+              gh issue edit "$ISSUE_ID" --title "[Games] Assessment for: ${GAME_NAME}"
+            fi
+          fi
 
   generate_assessment:
     if: github.event_name == 'pull_request_review' &&
