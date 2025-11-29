@@ -1,0 +1,45 @@
+{
+  "target": {
+    "game_name": "THE FINALS",
+    "timestamp_utc": "2025-11-29T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "Embark Studios",
+      "publisher": "Embark Studios",
+      "country": "Sweden",
+      "summary": "THE FINALS is developed and published by Embark Studios, a Stockholm-based studio founded by former Battlefield developers and fully owned by Nexon. Both the Steam store page and Wikipedia list Embark as both developer and publisher, and corporate materials describe Embark Studios AB as headquartered in Sweden, indicating a primary association with that country. Embark and Nexon are established companies with a track record in online games, suggesting a generally reputable and professional operation behind THE FINALS, though some players have criticized aspects of monetization and design typical of free-to-play shooters.",
+      "sources": [
+        "https://store.steampowered.com/app/2073850/THE_FINALS/",
+        "https://en.wikipedia.org/wiki/The_Finals",
+        "https://www.businesswire.com/news/home/20231207438476/en/THE-FINALS-From-Nexon%E2%80%99s-Embark-Studios-is-Available-Now-Worldwide"
+      ]
+    },
+    "anti_cheat": {
+      "type": "Easy Anti-Cheat (kernel-level)",
+      "classification": "invasive",
+      "summary": "According to the Steam store page, THE FINALS uses Easy Anti-Cheat and explicitly notes that it \"Uses Kernel Level Anti-Cheat\" and that Easy Anti-Cheat requires manual removal after uninstalling the game. Kernel-level anti-cheat operates with high system privileges and is generally considered more intrusive than standard user-mode solutions, even though it is common in competitive online shooters. Based on this, THE FINALS’ anti-cheat is best classified as invasive from a privacy and system-access standpoint, despite being a widely used commercial solution.",
+      "sources": [
+        "https://store.steampowered.com/app/2073850/THE_FINALS/",
+        "https://www.pcgamingwiki.com/wiki/The_Finals"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "Mostly Positive",
+      "steam_percentage": "approximately 80%",
+      "summary": "On Steam, THE FINALS currently shows an overall user review summary of \"Mostly Positive,\" with the English-language breakdown listed as \"Very Positive\" at around 80% positive reviews, and recent reviews in the last 30 days also marked \"Very Positive\" at roughly 84% positive. This indicates generally favorable sentiment, especially among recent players, though there have been periods of review bombing and criticism over balance changes, progression, and technical issues on certain platforms. Overall, the community appears to enjoy the core fast-paced, destructible-environment gameplay while remaining vocal about updates and live-service decisions.",
+      "sources": [
+        "https://store.steampowered.com/app/2073850/THE_FINALS/",
+        "https://steamdb.info/app/2073850/",
+        "https://www.pcgamesn.com/the-finals/loses-players"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 95,
+    "anti_cheat_score": 40,
+    "community_score": 80,
+    "overall_score": 72,
+    "overall_summary": "THE FINALS is a free-to-play, team-based FPS developed and published by Embark Studios, a Swedish studio owned by Nexon, giving it a clear and well-documented identity and ownership. The game uses Easy Anti-Cheat with kernel-level access, which is effective but relatively invasive compared to standard user-mode anti-cheat solutions, potentially raising privacy or control concerns for some players. Community sentiment on Steam is broadly positive, with an overall \"Mostly Positive\" rating and recent reviews trending \"Very Positive\" at around 80–84% positive, reflecting strong appreciation for its dynamic destruction and fast-paced gameplay alongside ongoing debates about balance, progression, and live-service changes."
+  }
+}
