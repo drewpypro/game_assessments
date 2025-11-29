@@ -74,12 +74,19 @@ jobs:
       contents: write
     needs: validate
     steps:
+      - name: Debug validate outputs
+        run: |
+          echo "DEBUG: game_name='${{ needs.validate.outputs.game_name }}'"
+          echo "DEBUG: validation_result='${{ needs.validate.outputs.validation_result }}'"
+          echo "DEBUG: validation_message='${{ needs.validate.outputs.validation_message }}'"
+          echo "DEBUG: slug='${{ needs.validate.outputs.slug }}'"
+          echo "DEBUG: json_path='${{ needs.validate.outputs.json_path }}'"
+          echo "DEBUG: md_path='${{ needs.validate.outputs.md_path }}'"
+
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }} 
-      - name: Debug
-        run: |
-          
+          ref: ${{ github.head_ref }}
+
       - name: Generate AI assessment
         id: generate_assessment
         env:
