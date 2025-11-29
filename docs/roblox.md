@@ -1,0 +1,80 @@
+---
+layout: default
+title: roblox – Third-Party Security Assessment
+---
+
+# Assessment: roblox
+
+**Type:** Game  
+**Date:** 2025-11-29T00:00:00Z  
+**Overall Score:** 70/5  
+
+---
+
+## Key Summary
+
+Roblox is a major online game platform and creation system developed and published by Roblox Corporation, an established U.S.-based public company with a long operational history and large user base, so its identity and ownership are very clear. The platform appears to rely on its own standard, service‑level security and moderation systems rather than third‑party kernel‑level anti‑cheat or heavy DRM, suggesting a typical level of intrusiveness for a large always‑online game service. Because Roblox is not available on Steam, there is no Steam review label or percentage to reference; however, external metrics and reporting show extremely high engagement alongside ongoing debates about safety and monetization. Overall, the game scores highly for clear identity, moderately for transparent and non‑invasive anti‑cheat, and lower for community sentiment only because standard Steam review data is unavailable, yielding a solid but not perfect overall assessment.
+
+---
+
+## Dimensions
+
+### Identity & Ownership (Score: 100/5)
+
+Roblox is developed and published by Roblox Corporation, a large, publicly traded American video game company headquartered in San Mateo, California. The firm has operated the Roblox platform since its public release in 2006 and is widely recognized as a major, established player in the games industry, with thousands of employees and a long track record of operating a massive online ecosystem. While the platform has faced scrutiny over safety, moderation, and monetization practices, Roblox Corporation is generally viewed as a mainstream, reputable company with significant regulatory and public visibility.
+
+**Developer:** Roblox Corporation  
+**Publisher:** Roblox Corporation  
+**Country:** United States
+
+---
+
+### Anti-Cheat & Client Risk (Score: 70/5)
+
+Roblox runs as its own online platform and game client rather than a traditional PC title distributed via Steam, and public documentation does not indicate the use of third‑party kernel‑level anti‑cheat solutions such as Easy Anti‑Cheat, BattlEye, or Denuvo. Instead, Roblox relies on its own server‑side validation, moderation, and client integrity checks to combat cheating and exploit scripts. These mechanisms are generally considered standard for a large online service and do not appear to involve separate kernel‑level drivers or highly invasive DRM components, though the platform does include typical always‑online requirements and account‑based access.
+
+**Anti-cheat type:** proprietary / platform-level (Roblox platform security)  
+**Classification:** standard
+
+---
+
+### Community Sentiment (Score: 40/5)
+
+Steam label: **unknown**  
+Positive review %: **unknown**
+
+Roblox is not distributed on Steam and therefore has no Steam user review summary or percentage score. Community sentiment instead surfaces through platform metrics and external coverage: Roblox regularly reports tens of millions of daily active users and has recently surpassed 45–47 million concurrent players, driven by highly popular user‑created experiences such as Grow a Garden and Steal a Brainrot. While the platform’s massive audience and engagement indicate strong overall popularity, public discussion also highlights concerns around child safety, moderation, and monetization. Because there is no official Steam page, standard Steam review labels and percentages cannot be provided.
+
+---
+
+## Sources
+
+**Identity:**  
+
+- https://en.wikipedia.org/wiki/Roblox
+
+- https://en.wikipedia.org/wiki/Roblox_Corporation
+
+- https://apps.apple.com/us/app/roblox/id431946152
+
+
+**Anti-Cheat:**  
+
+- https://en.wikipedia.org/wiki/Roblox
+
+- https://corp.roblox.com/
+
+- https://en.help.roblox.com/hc/en-us/articles/203313410-Security-Information
+
+- https://en.help.roblox.com/hc/en-us/articles/203313350-Safe-Chat-and-Filtering
+
+
+**Community Sentiment:**  
+
+- https://www.pockettactics.com/roblox/steam-deck
+
+- https://en.wikipedia.org/wiki/Roblox
+
+- https://www.pcworld.com/article/2893466/holy-crap-roblox-hits-45-million-concurrent-players-beating-steam.html
+
+- https://ixbt.games/en/news/2025/08/28/roblox-prevzosla-steam-po-cislu-odnovremennyx-igrokov.html
