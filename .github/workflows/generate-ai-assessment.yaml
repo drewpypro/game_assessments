@@ -77,14 +77,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }} 
-
+      - name: Debug
+        run: |
+          
       - name: Generate AI assessment
         id: generate_assessment
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         uses: drewpypro/drewpy-actions/call_assessment_api@gamesv1
         with:
-          game_name: ${{ needs.validate.pre_process_validation.outputs.game_name }}
+          game_name: ${{ needs.validate.outputs.game_name }}
 
       - name: Generate Approval PR
         id: pr_approval
@@ -94,7 +96,7 @@ jobs:
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
           GH_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS }}
-          GAME_NAME: ${{ needs.validate.pre_process_validation.outputs.game_name }}
+          GAME_NAME: ${{ needs.validate.outputs.game_name }}
         run: |
           echo "Generating PR for approval if necessary"
           AUTHOR=$(jq -r '.issue.user.login' "$GITHUB_EVENT_PATH")
@@ -102,8 +104,8 @@ jobs:
           BRANCH="issue-${ISSUE_ID}"
 
           echo "Preparing pre-approval files"
-          JSON_PATH="${{ steps.request_validation.outputs.json_path }}"
-          MD_PATH="${{ steps.request_validation.outputs.md_path }}"
+          JSON_PATH="${{ needs.validate.outputs.json_path }}"
+          MD_PATH="${{ needs.validate.outputs.md_path }}"
 
           # Make sure directories exist
           mkdir -p "$(dirname "$JSON_PATH")" "$(dirname "$MD_PATH")"
@@ -123,8 +125,8 @@ jobs:
             # Create and switch to the branch
             git checkout -b "$BRANCH"
 
-            git add "${{ steps.request_validation.outputs.md_path }}"
-            git add "${{ steps.request_validation.outputs.json_path }}"
+            git add "${{ needs.validate.outputs.md_path }}"
+            git add "${{ needs.validate.outputs.json_path }}"
 
             # Commit only if there are changes
             if ! git diff --staged --quiet; then
