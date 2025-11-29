@@ -95,8 +95,8 @@ jobs:
 
           if [ "$AUTHOR" = "drewpypro" ]; then
             echo "✅ Auto-approving" > /tmp/issue_comment.txt
-            gh label create "drewpypro" --color DAE8FC --description "🍆"
-            gh issue edit "$ISSUE_ID" --add-label "drewpypro"          
+            gh label create "drewpypro" --color DAE8FC --description "🍆" || true
+            gh issue edit "$ISSUE_ID" --add-label "drewpypro"      
           else
 
             # Check if branch already exists
