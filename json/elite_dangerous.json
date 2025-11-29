@@ -1,0 +1,44 @@
+{
+  "target": {
+    "game_name": "elite dangerous",
+    "timestamp_utc": "2025-11-29T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "Frontier Developments",
+      "publisher": "Frontier Developments",
+      "country": "United Kingdom",
+      "summary": "Elite Dangerous is developed and published by Frontier Developments, a long‑running British studio based in Cambridge known for simulation and management titles such as Planet Coaster and Planet Zoo. The Steam and Epic store pages list Frontier Developments as both developer and publisher, and the Elite Dangerous IP has been under Frontier’s control for many years, indicating a stable, established owner with a strong track record of supporting live service games. Overall, the developer and publisher appear reputable and aligned with expectations for a large, persistent online space sim.",
+      "sources": [
+        "https://store.steampowered.com/app/359320/Elite_Dangerous/",
+        "https://store.epicgames.com/en-US/p/elite-dangerous",
+        "https://en.wikipedia.org/wiki/Frontier_Developments"
+      ]
+    },
+    "anti_cheat": {
+      "type": "none",
+      "classification": "standard",
+      "summary": "Public information for Elite Dangerous does not indicate the use of third‑party invasive anti‑cheat solutions such as kernel‑level drivers or Denuvo‑style DRM. PCGamingWiki and the Steam store page do not list any additional DRM beyond the standard Steam platform integration, and discussion around the game focuses on account linking and launchers rather than anti‑cheat drivers. As a result, Elite Dangerous is best characterized as using only standard platform DRM and server‑side checks typical for an online game, with no evidence of kernel‑level or highly invasive anti‑cheat.",
+      "sources": [
+        "https://store.steampowered.com/app/359320/Elite_Dangerous/",
+        "https://www.pcgamingwiki.com/wiki/Elite_Dangerous"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "Mostly Positive",
+      "steam_percentage": "75%",
+      "summary": "On Steam, Elite Dangerous currently holds an overall \"Mostly Positive\" user review summary, with roughly three‑quarters of recent reviews marked positive and a long‑term English review score in the mid‑70% range. Players consistently praise the vast, detailed galaxy, freedom of playstyles, and long‑term community events, while common criticisms include a steep learning curve, grindy progression (especially engineering), and occasional frustration with design decisions or technical issues. Overall sentiment suggests a dedicated and generally satisfied core community, with some divisiveness around specific expansions and systems.",
+      "sources": [
+        "https://store.steampowered.com/app/359320/Elite_Dangerous/",
+        "https://steamdb.info/app/359320/graphs/"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 5,
+    "anti_cheat_score": 4,
+    "community_score": 4,
+    "overall_score": 4,
+    "overall_summary": "Elite Dangerous is a long‑running online space sim developed and published by the established UK studio Frontier Developments, which lends strong confidence in the game’s ownership and ongoing support. There is no evidence of invasive or kernel‑level anti‑cheat or heavy third‑party DRM beyond standard platform integration, suggesting a typical, non‑intrusive setup for an online title. Steam community sentiment is broadly positive, with a \"Mostly Positive\" rating and around three‑quarters of players recommending the game, though reviews highlight a steep learning curve, grind, and some contentious design and expansion decisions. Overall, the game appears reputable and well‑supported, with standard anti‑cheat/DRM practices and a generally favorable but occasionally polarized community response."
+  }
+}
