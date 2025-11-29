@@ -65,7 +65,7 @@ jobs:
         uses: drewpypro/drewpy-actions/request_validation@gamesv1
         id: request_validation
         with:
-          game_name: ${{ pre_process_validation.outputs.game_name }}
+          game_name: ${{ steps.pre_process_validation.outputs.game_name }}
 
       - name: Generate Approval PR
         id: pre_approval
@@ -75,11 +75,23 @@ jobs:
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GAME_NAME: ${{ steps.pre_process_validation.outputs.game_name }}
         run: |
           echo "Generating PR for approval if necessary"
           AUTHOR=$(jq -r '.issue.user.login' "$GITHUB_EVENT_PATH")
           ISSUE_ID=${{ github.event.issue.number }}
-          BRANCH="issue-${ISSUE_ID}"          
+          BRANCH="issue-${ISSUE_ID}"
+          
+          echo "Preparing pre-approval files"
+          JSON_PATH="${{ steps.request_validation.outputs.json_path }}"
+          MD_PATH="${{ steps.request_validation.outputs.md_path }}"
+
+          # Make sure directories exist
+          mkdir -p "$(dirname "$JSON_PATH")" "$(dirname "$MD_PATH")"
+
+          # Create empty files
+          touch "$JSON_PATH"
+          touch "$MD_PATH"
 
           if [ "$AUTHOR" = "drewpypro" ]; then
             echo "✅ Auto-approving" > /tmp/issue_comment.txt
@@ -98,8 +110,8 @@ jobs:
 
             # Commit only if there are changes
             if ! git diff --staged --quiet; then
-              git add "${{ request_validation.outputs.md_path }}"
-              git add "${{ request_validation.outputs.json_path }}"
+              git add "${{ steps.request_validation.outputs.md_path }}"
+              git add "${{ steps.request_validation.outputs.json_path }}"
               git commit -m "Add ${GAME_NAME} from issue #${ISSUE_ID}"
               
               # Force push or push with lease to handle potential conflicts
@@ -110,12 +122,13 @@ jobs:
                 --body "This PR generates a request to review #${ISSUE_ID} for ${GAME_NAME} by ${AUTHOR}." \
                 --head "$BRANCH" \
                 --base main)
+            fi
 
             echo "A PR has been submitted for review, please wait for approval" > /tmp/issue_comment.txt
             gh issue comment $ISSUE_ID --body-file /tmp/issue_comment.txt
             gh label create "pending-approval" --color FBCA04 --description "awaiting approval" || true
             gh issue edit "$ISSUE_ID" --add-label "pending-approval"
-            gh issue edit $ISSUE_NUMBER --title "[Games] Assessment for: ${GAME_NAME}"
+            gh issue edit "$ISSUE_ID" --title "[Games] Assessment for: ${GAME_NAME}"
 
   generate_assessment:
     if: github.event_name == 'pull_request_review' &&
