@@ -1,0 +1,49 @@
+name: 'Call Assessment API'
+description: 'Generates game assessment JSON via OpenAI API and renders markdown report using Jinja2 template'
+author: 'drewpypro'
+
+inputs:
+  game_name:
+    description: 'The game name to assess'
+    required: true
+  openai_api_key:
+    description: 'OpenAI API key for generating assessments'
+    required: true
+
+outputs:
+  result:
+    description: 'Assessment result (success, api_error, invalid_json, file_error, script_error)'
+    value: ${{ steps.assessment.outputs.result }}
+  message:
+    description: 'Human-readable message for the assessment result'
+    value: ${{ steps.assessment.outputs.message }}
+  game_name:
+    description: 'Game name that was assessed'
+    value: ${{ steps.assessment.outputs.game_name }}
+  json_path:
+    description: 'Path to the generated JSON assessment file'
+    value: ${{ steps.assessment.outputs.json_path }}
+  md_path:
+    description: 'Path to the generated markdown report file'
+    value: ${{ steps.assessment.outputs.md_path }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      shell: bash
+      run: pip install openai jinja2
+
+    - name: Run assessment
+      id: assessment
+      shell: bash
+      env:
+        OPENAI_API_KEY: ${{ inputs.openai_api_key }}
+      run: |
+        python3 "${{ github.action_path }}/call_assessment_api.py" \
+          --game-name "${{ inputs.game_name }}"

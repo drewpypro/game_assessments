@@ -2,12 +2,7 @@ name: Generate AI Assessment Workflow
 
 on:
   issues:
-    types: [opened, edited]  # Issue form submission
-  pull_request_review:
-    types: [submitted]       # PR approved
-  pull_request:
-    types: [closed]          # Merged (for docs sync, if you want)
-
+    types: [opened]
 
 jobs:
   validate:
@@ -22,8 +17,6 @@ jobs:
       validation_result: ${{ steps.request_validation.outputs.result }}
       validation_message: ${{ steps.request_validation.outputs.message }}
       slug: ${{ steps.request_validation.outputs.slug }}
-      json_path: ${{ steps.request_validation.outputs.json_path }}
-      md_path: ${{ steps.request_validation.outputs.md_path }}
 
     steps:
       - name: Checkout Repository
@@ -80,8 +73,6 @@ jobs:
           echo "DEBUG: validation_result='${{ needs.validate.outputs.validation_result }}'"
           echo "DEBUG: validation_message='${{ needs.validate.outputs.validation_message }}'"
           echo "DEBUG: slug='${{ needs.validate.outputs.slug }}'"
-          echo "DEBUG: json_path='${{ needs.validate.outputs.json_path }}'"
-          echo "DEBUG: md_path='${{ needs.validate.outputs.md_path }}'"
 
       - uses: actions/checkout@v4
         with:
@@ -93,6 +84,7 @@ jobs:
         with:
           game_name: ${{ needs.validate.outputs.game_name }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
       - name: Generate Approval PR
         id: pr_approval
         env:
@@ -108,9 +100,8 @@ jobs:
           ISSUE_ID=${{ github.event.issue.number }}
           BRANCH="issue-${ISSUE_ID}"
 
-          echo "Preparing pre-approval files"
-          JSON_PATH="${{ needs.validate.outputs.json_path }}"
-          MD_PATH="${{ needs.validate.outputs.md_path }}"
+          JSON_PATH="${{ steps.generate_assessment.outputs.json_path }}"
+          MD_PATH="${{ steps.generate_assessment.outputs.md_path }}"
 
           # Make sure directories exist
           mkdir -p "$(dirname "$JSON_PATH")" "$(dirname "$MD_PATH")"
@@ -130,8 +121,8 @@ jobs:
             # Create and switch to the branch
             git checkout -b "$BRANCH"
 
-            git add "${{ needs.validate.outputs.md_path }}"
-            git add "${{ needs.validate.outputs.json_path }}"
+            git add "${{ steps.generate_assessment.outputs.md_path }}"
+            git add "${{ steps.generate_assessment.outputs.json_path }}"
 
             # Commit only if there are changes
             if ! git diff --staged --quiet; then
