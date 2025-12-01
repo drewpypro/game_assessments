@@ -1,0 +1,46 @@
+{
+  "target": {
+    "game_name": "Stellaris",
+    "timestamp_utc": "2025-12-01T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "Paradox Development Studio",
+      "publisher": "Paradox Interactive",
+      "country": "Sweden",
+      "summary": "Stellaris is developed by Paradox Development Studio and published by Paradox Interactive, a long‑running Swedish strategy specialist known for titles like Europa Universalis and Crusader Kings. The company has an extensive track record of supporting its games with long‑term updates and DLC, and while some players criticize the volume and pricing of add‑ons, Paradox is generally regarded as an established and reputable publisher within the grand strategy niche.",
+      "sources": [
+        "https://store.steampowered.com/app/281990/Stellaris/",
+        "https://en.wikipedia.org/wiki/Stellaris_(video_game)",
+        "https://en.wikipedia.org/wiki/Paradox_Interactive"
+      ]
+    },
+    "anti_cheat": {
+      "type": "none",
+      "classification": "standard",
+      "summary": "Stellaris does not use a dedicated third‑party anti‑cheat solution such as Easy Anti‑Cheat, BattlEye, or kernel‑level drivers. Multiplayer is typically hosted peer‑to‑peer or on user‑run servers, and there is no indication of invasive anti‑cheat or always‑online DRM beyond standard Steam integration on the Steam version. As such, its protections are best characterized as non‑invasive, standard platform DRM rather than a heavy anti‑cheat system.",
+      "sources": [
+        "https://store.steampowered.com/app/281990/Stellaris/",
+        "https://www.pcgamingwiki.com/wiki/Stellaris",
+        "https://www.reddit.com/r/Stellaris/comments/13zds82/does_stellaris_multiplayer_have_an_anticheat/"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "Very Positive",
+      "steam_percentage": "87%",
+      "summary": "On Steam, Stellaris currently holds a \"Very Positive\" overall reception, with roughly 87% of English‑language user reviews marked positive. Players consistently praise its deep grand‑strategy and 4X hybrid design, rich emergent storytelling, and strong replayability, while common criticisms focus on late‑game performance, AI behavior, and the large, sometimes expensive DLC catalogue. Overall sentiment remains strongly favorable, especially among fans of complex strategy games.",
+      "sources": [
+        "https://store.steampowered.com/app/281990/Stellaris/",
+        "https://steamdb.info/app/281990/",
+        "https://www.metacritic.com/game/stellaris/"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 5,
+    "anti_cheat_score": 4,
+    "community_score": 5,
+    "overall_score": 5,
+    "overall_summary": "Stellaris is a well‑established grand strategy and 4X hybrid developed by Paradox Development Studio and published by Paradox Interactive, a reputable Swedish company with a long history in the genre. The game relies on standard platform DRM without any known invasive or kernel‑level anti‑cheat, making it relatively low‑intrusion from a security and privacy standpoint. Community sentiment on Steam is strongly positive, with a high percentage of favorable reviews highlighting depth, replayability, and emergent storytelling, tempered by some concerns over performance and extensive DLC. Taken together, Stellaris is a highly recommended title for players comfortable with complex strategy games."
+  }
+}
