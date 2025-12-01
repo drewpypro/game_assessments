@@ -1,0 +1,49 @@
+{
+  "target": {
+    "game_name": "dark souls 2",
+    "timestamp_utc": "2025-12-01T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "FromSoftware, Inc.",
+      "publisher": "Bandai Namco Entertainment",
+      "country": "Japan",
+      "summary": "Dark Souls II is developed by FromSoftware, Inc., a long-established Japanese studio known for the Souls series and other action RPGs, and published on PC by Bandai Namco Entertainment, a major Japanese game publisher. Both companies are large, reputable, and have extensive track records with global releases, so the game’s ownership and support structure are well-established and in line with expectations for a flagship AA/AAA action RPG.",
+      "sources": [
+        "https://store.steampowered.com/app/236430/DARK_SOULS_II/",
+        "https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/",
+        "https://en.wikipedia.org/wiki/Dark_Souls_II",
+        "https://www.bandainamcoent.com/",
+        "https://www.fromsoftware.jp/ww/"
+      ]
+    },
+    "anti_cheat": {
+      "type": "Valve Anti-Cheat (VAC); Steam DRM",
+      "classification": "standard",
+      "summary": "On PC, Dark Souls II uses Steam as its distribution and activation platform and is flagged as a Valve Anti-Cheat (VAC) enabled title. VAC operates at the user level rather than as a kernel-level driver and is generally considered a standard, non-invasive anti-cheat solution. There is no credible indication of additional kernel-level or highly intrusive DRM/anti-cheat beyond Steam’s normal client and VAC integration, so the game’s protections are typical for a mainstream online-enabled Steam release.",
+      "sources": [
+        "https://store.steampowered.com/app/236430/DARK_SOULS_II/",
+        "https://darksouls2.wiki.fextralife.com/PC",
+        "https://community.pcgamingwiki.com/blog/features/port-reports/pc-report-dark-souls-2-r140/",
+        "https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "Very Positive",
+      "steam_percentage": "84%",
+      "summary": "On Steam, Dark Souls II currently holds a \"Very Positive\" overall user review label, with roughly 84% of user reviews marked positive for the base DX9 version and a similar percentage for the Scholar of the First Sin edition. Players frequently praise the challenging combat, atmospheric world, and replay value, while some criticism focuses on certain boss designs, balance differences compared to the first Dark Souls, and technical quirks. Overall sentiment is strongly favorable, especially among fans of difficult action RPGs.",
+      "sources": [
+        "https://store.steampowered.com/app/236430/DARK_SOULS_II/",
+        "https://store.steampowered.com/app/335300/DARK_SOULS_II_Scholar_of_the_First_Sin/",
+        "https://store.steampowered.com/sub/58135/Dark_Souls_II_Bundle/"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 5,
+    "anti_cheat_score": 4,
+    "community_score": 5,
+    "overall_score": 5,
+    "overall_summary": "Dark Souls II is a major action RPG from reputable Japanese developer FromSoftware and publisher Bandai Namco Entertainment, with clear and well-established ownership. On PC it uses standard Steam DRM and Valve Anti-Cheat, which are widely regarded as non-kernel, non-invasive protections typical for online-enabled titles. Community sentiment on Steam is very positive, with a strong majority of players recommending the game despite some debate over design differences from the first Dark Souls. Taken together, the game scores highly across identity, anti-cheat practices, and community reception, making it a broadly recommended title for players comfortable with its challenging gameplay."
+  }
+}
