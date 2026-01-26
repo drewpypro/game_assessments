@@ -1,0 +1,90 @@
+---
+layout: default
+title: "Lort – Assessment"
+---
+
+# Assessment: Lort
+
+**Type:** Game  
+**Date:** 2026-01-26T00:00:00Z  
+**Overall Score:** 4/5  
+
+---
+
+## Key Summary
+
+LORT is an early access co-op action roguelite developed and published by Big Distraction, a US-based indie studio formed by experienced AAA developers. The studio appears reputable and engaged with its community, with clear branding and consistent information across major databases and press outlets. There is no evidence of invasive or kernel-level anti-cheat or heavy third-party DRM, suggesting a standard, non-intrusive technical approach. Steam user reviews are Mostly Positive at around 75%, with players praising the chaotic co-op gameplay and humor while noting difficulty balance and connectivity as key pain points. Overall, LORT presents as a solid, community-responsive indie title with generally favorable reception and no major red flags in ownership, anti-cheat, or sentiment.
+
+---
+
+## Dimensions
+
+### Identity & Ownership (Score: 5/5)
+
+LORT is developed and published by Big Distraction, an indie studio founded by veterans of large AAA titles such as Fortnite and Rocket League. The company positions itself as a player-focused team aiming to deliver co-op, roguelite experiences with strong community involvement. While still relatively new, Big Distraction appears transparent and engaged with players, and early coverage and storefront information suggest a reputable, professionally run studio based in the United States.
+
+**Developer:** Big Distraction  
+**Publisher:** Big Distraction  
+**Country:** United States
+
+---
+
+### Anti-Cheat & Client Risk (Score: 4/5)
+
+No explicit third-party DRM or anti-cheat solution such as Denuvo, Easy Anti-Cheat, or kernel-level drivers is mentioned on the Steam store page, PC-focused databases, or press coverage for LORT. The game appears to rely on standard Steam integration and typical online co-op networking without any indication of invasive or kernel-level anti-cheat. Based on available information, its protections are best characterized as standard and non-intrusive.
+
+**Anti-cheat type:** none  
+**Classification:** standard
+
+---
+
+### Community Sentiment (Score: 4/5)
+
+Steam label: **Mostly Positive**  
+Positive review %: **75%**
+
+On Steam, LORT currently holds a "Mostly Positive" user review summary with approximately 75% positive reviews, indicating that most players are enjoying the game. Community feedback frequently praises its chaotic co-op roguelite gameplay, humor, and variety of power-ups, while some criticism focuses on difficulty balance, solo-play experience, and occasional connectivity or matchmaking issues. Overall sentiment is favorable, with players generally optimistic about ongoing updates and the early access roadmap.
+
+---
+
+## Sources
+
+**Identity:**  
+
+- https://store.steampowered.com/app/2956680/LORT/
+
+- https://www.gematsu.com/games/lort
+
+- https://www.gematsu.com/2025/05/fantasy-co-op-roguelite-action-game-lort-announced-for-pc
+
+- https://www.gamesradar.com/games/roguelike/we-kept-waiting-for-another-risk-of-rain-2-it-never-came-new-roguelike-hits-steam-with-2-8-player-co-op-a-roadmap-locked-and-loaded-and-tons-of-internet-humor/
+
+- https://www.pcgamer.com/games/roguelike/lort-devs-reluctantly-tweak-the-fantasy-roguelikes-difficulty-after-players-complain-the-risk-of-rain-2-successor-is-too-hard-you-are-meant-to-die-and-learn-how-to-overcome-the-challenge/
+
+- https://raijin.gg/app/2956680/LORT
+
+- https://www.mobygames.com/game/253574/lort/
+
+
+**Anti-Cheat:**  
+
+- https://store.steampowered.com/app/2956680/LORT/
+
+- https://raijin.gg/app/2956680/LORT
+
+- https://www.mobygames.com/game/253574/lort/
+
+- https://www.gematsu.com/games/lort
+
+
+**Community Sentiment:**  
+
+- https://store.steampowered.com/app/2956680/LORT/
+
+- https://raijin.gg/app/2956680/LORT
+
+- https://store.steampowered.com/app/3831450/_LORT_Demo/
+
+- https://www.pcgamer.com/games/roguelike/lort-devs-reluctantly-tweak-the-fantasy-roguelikes-difficulty-after-players-complain-the-risk-of-rain-2-successor-is-too-hard-you-are-meant-to-die-and-learn-how-to-overcome-the-challenge/
+
+- https://www.gamesradar.com/games/roguelike/we-kept-waiting-for-another-risk-of-rain-2-it-never-came-new-roguelike-hits-steam-with-2-8-player-co-op-a-roadmap-locked-and-loaded-and-tons-of-internet-humor/
