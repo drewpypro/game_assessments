@@ -1,0 +1,74 @@
+---
+layout: default
+title: "aces of thunder – Assessment"
+---
+
+# Assessment: aces of thunder
+
+**Type:** Game  
+**Date:** 2026-02-08T00:00:00Z  
+**Overall Score:** 4/5  
+
+---
+
+## Key Summary
+
+Aces of Thunder is an aerial combat simulator developed by the established studio Gaijin Entertainment and published by Gaijin’s associated entities in Hungary, indicating a reputable and experienced ownership background. There is no evidence of invasive or kernel‑level anti‑cheat or heavy third‑party DRM beyond standard platform mechanisms, which should be acceptable to most players concerned about intrusiveness. Community sentiment on Steam is currently mixed at around 58% positive, reflecting both enthusiasm for the immersive flight experience and notable criticism from a significant portion of players. Taken together, the game scores well on identity and acceptable on anti‑cheat, with community feedback suggesting that prospective players should review recent user impressions to ensure its current state aligns with their expectations.
+
+---
+
+## Dimensions
+
+### Identity & Ownership (Score: 5/5)
+
+Aces of Thunder is developed by Gaijin Entertainment and published on PC by Gaijin Network Ltd, with console publishing handled by Gaijin Distribution Kft. The Steam store lists Gaijin Entertainment as developer and Gaijin Network Ltd as publisher, while the PlayStation Store credits Gaijin Distribution Kft as publisher and the copyright notice references Gaijin Games Kft, all entities associated with Gaijin’s Budapest-based operations. Gaijin is an established studio best known for War Thunder, and the branding and cross‑references between the official site, Steam, and PlayStation pages suggest a reputable, experienced developer–publisher group operating primarily out of Hungary.
+
+**Developer:** Gaijin Entertainment  
+**Publisher:** Gaijin Network Ltd / Gaijin Distribution Kft  
+**Country:** Hungary
+
+---
+
+### Anti-Cheat & Client Risk (Score: 4/5)
+
+No explicit third‑party anti‑cheat or DRM solution such as Denuvo, Easy Anti‑Cheat, BattlEye, or kernel‑level drivers is mentioned on the Steam, PlayStation, or official Aces of Thunder websites. The Steam page only indicates standard Steam integration and online PvP, and the PlayStation listing notes typical online and platform requirements. In the absence of any indication of additional DRM or kernel‑level components, the game appears to rely on standard platform DRM and networking, which is generally considered non‑invasive.
+
+**Anti-cheat type:** Steam DRM / platform DRM only (no third-party anti-cheat listed)  
+**Classification:** standard
+
+---
+
+### Community Sentiment (Score: 3/5)
+
+Steam label: **Mixed**  
+Positive review %: **58%**
+
+On Steam, Aces of Thunder currently holds a “Mixed” user review summary, with approximately 58% of user reviews marked as positive. This indicates a divided community response: many players appreciate the high‑fidelity VR-focused flight simulation and cockpit immersion, while others appear more critical, likely around balance, content, or monetization expectations typical for competitive online titles. Overall sentiment is cautiously mixed rather than strongly positive or negative.
+
+---
+
+## Sources
+
+**Identity:**  
+
+- https://store.steampowered.com/app/2754090/Aces_of_Thunder/
+
+- https://store.playstation.com/en-us/concept/10007306
+
+- https://acesofthunder.net/en/
+
+
+**Anti-Cheat:**  
+
+- https://store.steampowered.com/app/2754090/Aces_of_Thunder/
+
+- https://store.playstation.com/en-us/concept/10007306
+
+- https://acesofthunder.net/en/
+
+
+**Community Sentiment:**  
+
+- https://store.steampowered.com/app/2754090/Aces_of_Thunder/
+
+- https://steamdb.info/app/2754090/
