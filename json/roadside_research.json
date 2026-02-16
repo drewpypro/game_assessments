@@ -1,0 +1,48 @@
+{
+  "target": {
+    "game_name": "roadside research",
+    "timestamp_utc": "2026-02-16T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "Cybernetic Walrus",
+      "publisher": "Oro Interactive",
+      "country": "Belgium",
+      "summary": "Roadside Research is developed by Cybernetic Walrus and published by Oro Interactive, with both companies active in the indie and AA space. Cybernetic Walrus is a Belgian studio known for prior titles like Antigraviator and Rise of Humanity, and appears to be an established, reputable developer. Oro Interactive focuses on publishing indie games and has been handling promotion and platform deals such as Xbox Game Pass. Overall, the game’s ownership and production context look professional and aligned with typical expectations for a modern indie co-op simulator.",
+      "sources": [
+        "https://store.steampowered.com/app/3643170/Roadside_Research/",
+        "https://steambase.io/games/roadside-research/info",
+        "https://kotaku.com/games/roadside-research",
+        "https://www.cyberneticwalrus.com/",
+        "https://www.indie-games.eu/roadside-research-launches-into-early-access-on-pc-and-xbox-game-pass-next-year/"
+      ]
+    },
+    "anti_cheat": {
+      "type": "none",
+      "classification": "none",
+      "summary": "Roadside Research is a co-op gas station simulator without competitive multiplayer or PvP elements, and there is no mention of third-party anti-cheat or heavy DRM such as Denuvo, EAC, BattlEye, or kernel-level drivers on its Steam page or in public documentation. It appears to rely only on standard Steamworks integration and platform-level protections, with no evidence of invasive anti-cheat components.",
+      "sources": [
+        "https://store.steampowered.com/app/3643170/Roadside_Research/",
+        "https://www.pcgamingwiki.com/wiki/Roadside_Research",
+        "https://steambase.io/games/roadside-research/info"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "Very Positive",
+      "steam_percentage": "86%",
+      "summary": "On Steam, Roadside Research currently holds a “Very Positive” user review summary, with approximately 86% of around 468 user reviews being positive. Early players praise the charming alien-undercover premise, satisfying gas station management loop, and fun co-op chaos, while some criticisms focus on typical Early Access issues such as bugs, balance, and a desire for more content and progression depth. Overall sentiment is strongly favorable for an Early Access release, with the community generally optimistic about future updates.",
+      "sources": [
+        "https://store.steampowered.com/app/3643170/Roadside_Research/",
+        "https://steambase.io/games/roadside-research/info",
+        "https://games-stats.com/steam/game/roadside-research/"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 5,
+    "anti_cheat_score": 5,
+    "community_score": 4,
+    "overall_score": 5,
+    "overall_summary": "Roadside Research is an Early Access co-op gas station simulator developed by Belgian studio Cybernetic Walrus and published by Oro Interactive, both of which appear reputable and experienced. There is no indication of third-party or kernel-level anti-cheat or heavy DRM, suggesting a non-invasive technical footprint. Community reception on Steam is very positive so far, with roughly mid‑80s approval and players enjoying the co-op management gameplay despite some Early Access rough edges. Taken together, the game currently looks like a strong, low‑risk recommendation for players interested in quirky co-op simulation titles."
+  }
+}
