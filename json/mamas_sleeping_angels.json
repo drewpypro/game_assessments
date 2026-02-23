@@ -1,0 +1,49 @@
+{
+  "target": {
+    "game_name": "mamas sleeping angels",
+    "timestamp_utc": "2026-02-23T00:00:00Z"
+  },
+  "results": {
+    "identity": {
+      "developer": "itamu",
+      "publisher": "Oro Interactive",
+      "country": "unknown",
+      "summary": "Mama's Sleeping Angels is developed by solo indie developer itamu and published by Oro Interactive, a small publisher known for quirky, experimental indie titles. Public materials consistently list this pairing, but neither the Steam page nor press coverage clearly state a primary country of origin for the developer or publisher, so the geographic identity remains unclear despite the parties appearing legitimate and active in the indie space.",
+      "sources": [
+        "https://store.steampowered.com/app/2918310/Mamas_Sleeping_Angels/",
+        "https://steamdb.info/app/2918310/",
+        "https://www.timesofgames.com/news/mamas-sleeping-angels-demo-details/",
+        "https://www.4gamer.net/games/974/G097451/20260109075/",
+        "https://news.denfaminicogamer.jp/news/2601212m"
+      ]
+    },
+    "anti_cheat": {
+      "type": "none",
+      "classification": "none",
+      "summary": "There is no mention of third‑party DRM or anti‑cheat such as Denuvo, EAC, or kernel‑level systems on the Steam store page, SteamDB entry, or in press coverage for Mama's Sleeping Angels. As a primarily co‑op indie title distributed via Steam with no stated additional DRM, it appears to rely only on standard Steam protections and does not use any invasive anti‑cheat.",
+      "sources": [
+        "https://store.steampowered.com/app/2918310/Mamas_Sleeping_Angels/",
+        "https://steamdb.info/app/2918310/",
+        "https://pcgamingwiki.com"
+      ]
+    },
+    "community_sentiment": {
+      "steam_label": "unknown",
+      "steam_percentage": "unknown",
+      "summary": "Mama's Sleeping Angels is not yet released and currently has no user reviews on its Steam page, so there is no aggregate review label or percentage score available. Early coverage from gaming sites is generally positive and curious about its surreal co‑op horror concept, but formal community sentiment on Steam cannot yet be assessed.",
+      "sources": [
+        "https://store.steampowered.com/app/2918310/Mamas_Sleeping_Angels/",
+        "https://steamdb.info/app/2918310/",
+        "https://gamermatters.com/mamas-sleeping-angels-is-one-fever-dream-of-a-multiplayer-game-demo-now-available/",
+        "https://www.nettosgameroom.com/2026/01/y2k-dream-exploration-game-mamas.html"
+      ]
+    }
+  },
+  "scoring": {
+    "identity_score": 4,
+    "anti_cheat_score": 5,
+    "community_score": 2,
+    "overall_score": 4,
+    "overall_summary": "Mama's Sleeping Angels is an upcoming co‑op Y2K‑styled dream‑exploration shooter developed by solo indie creator itamu and published by Oro Interactive, both of whom appear legitimate and active in the indie scene, though their primary country of origin is not clearly stated. The game shows no signs of additional DRM or invasive anti‑cheat beyond standard Steam integration, which is favorable for privacy‑conscious players. However, because the title has not yet released and has no Steam user reviews, community sentiment is still largely unknown, with only early press impressions available. Overall, it currently looks like a promising, non‑invasive indie release, but players should be aware that real user feedback will only emerge after launch."
+  }
+}
